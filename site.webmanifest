@@ -1,0 +1,14 @@
+{
+    "name": "Hitpoints and Himbos",
+    "short_name": "H&H",
+    "icons": [
+        {
+            "src": "https://blog.lordyod.com/static/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
