@@ -1,0 +1,178 @@
+baseURL = 'https://www.lordyod.com/'
+languageCode = 'en-us'
+defaultContentLanguage = 'en'
+title = 'Hitpoints and Himbos'
+
+theme = 'LoveIt'
+
+[params]
+  version ='0.2.X'
+  description = 'Thoughts on gaming and tech'
+  keywords = ['RPG', 'D&D', 'OSR']
+  defaultTheme = 'auto'
+  fingerprint = "sha512"
+  dateFormat = 'October 5th, 2021'
+  images = ['/logo.png']
+
+  [params.app]
+    title = 'Hitpoints and Himbos'
+    noFavicon = false
+    svgFaveicon ='static/favicon.ico'
+    themeColor = '#ffffff'
+    iconColor = '%5bbad5'
+    titleColor = '%da532c'
+
+  [params.search]
+    enable = true
+    type = 'lunr'
+    contentLength = 4000
+    placeholder = ''
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = 'em'
+    absoluteURL = 'false'
+    [params.search.algolia]
+      index = ''
+      appID = ''
+      searchKey = ''
+
+  [params.header]
+    destopMode = 'fixed'
+    mobileMode = 'auto'
+    [params.header.title]
+      logo = ''
+      name = 'Hitpoints and Himbos'
+      pre = ''
+      post = ''
+      typeit = false
+
+    [params.footer]
+      enable = true
+      custom = ''
+      hugo = true
+      copyright = true
+      author = true
+      since = 2021
+      icp = ''
+      license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+    [params.section]
+      paginate = 20
+      dateFormat = '01-02'
+      rss = 10
+
+    [params.list]
+      paginate = 20
+      dateFormat = '01-02'
+      rss = 10
+
+    [params.home]
+      rss = 10
+      [params.home.profile]
+        enable = true
+        gravatarEmail = 'gravatar@lordyod.com'
+        avatarURL = '/images/avatar.png'
+        title = 'Hitpoints and Himbos'
+        subtitle = ''
+        typeit = true
+        social = true
+        disclaimer = ''
+      [params.home.posts]
+        enable = true
+        paginate = 6
+        defaultHiddenFromHomePage = false
+
+    [params.social]
+      GitHub = 'lordyod'
+      Twitter = 'lordyod'
+      Youtubechannel = ''
+      Email = 'blog@lordyod.com'
+      RSS = true
+
+    [params.page]
+      hiddenFromHomePage = false
+      hiddenFromSearch = false
+      twemoji = false
+      lightgallery = false
+      ruby = false
+      fraction = false
+      fontawesome = false
+      linkToMarkdown = false
+      rssFullText = false
+      [params.page.toc]
+        enable = false
+        #keepStatic = true
+        #auto = true
+      [params.page.math]
+        enable = false
+        #copyTex = true
+      [params.page.code]
+        copy = true
+        maxShownLines = 10
+      [params.page.share]
+        enable = true
+        Twitter = true
+        Reddit = true
+        Blogger = false
+
+  [menu]
+    [[menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts"
+      title = ""
+      weight = 1
+    [[menu.main]]
+      identifyer = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      weight = 2
+    [[menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersIntTable = true
+    noClasses = false
+
+[author]
+  name = "Lord Yod"
+  email = "blog@lordyod.com"
+  link = "https://www.lordyod.com"
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[Permalinks]
+  posts = ":filename"
+
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
