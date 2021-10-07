@@ -3,13 +3,15 @@
 
 I'll try to keep this post updated with a list of the games I'm currently
 running or playing in.
+<!--more-->
 
 ## Playing
 
 * **Radiant Gaia:** an [open table](https://thealexandrian.net/wordpress/38643/roleplaying-games/open-table-manifesto)
     5th Edition D\&D game set in a homebrew world, the players (mostly) come
     from an underground realm called *Terra* and are sent on expeditions to
-    explore *Gaia* by a patron. I play [Beatrix the Monolith]({{< ref "/tags/beatrix/" >}}),
+    explore *Gaia* by a patron. I play
+    [Beatrix the Monolith]({{< ref "/tags/beatrix/" >}}),
     a half-orc [Grey Watchman Warden](https://mfov.magehandpress.com/2016/12/warden.html).
     This game is run by Sammy who I met through the wonderful
     [Alexandrian](https://thealexandrian.net/) Discord.

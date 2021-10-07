@@ -4,6 +4,7 @@
 I'm running the [Hot Springs Island](https://swordfishislands.itch.io/hot-springs-island)
 sandbox campaign by Jacob Hurst, using the [Old School Essentials](https://necroticgnome.com/)
 ruleset.
+<!--more-->
 
 We're starting with the _Classic_ ruleset, 3d6 in order. It's likely to be a
 very high-stakes game and this'll probably be a rude awakening for some of the

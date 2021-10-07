@@ -4,6 +4,7 @@
 I'm running [Waterdeep Dragon Heist](https://duckduckgo.com/?q=waterdeep+dragon+heist&ia=web)
 using the [Alexandrian Remix](https://thealexandrian.net/wordpress/41217/roleplaying-games/dragon-heist-remix-part-1-the-villains)
 for a group of inexperienced players.
+<!--more-->
 
 The party:
 

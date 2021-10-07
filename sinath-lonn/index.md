@@ -3,6 +3,7 @@
 
 This is a science fantasy campaign set in a homebrew world, run using a hacked
 version of 5th Edition D\&D.
+<!--more-->
 
 The current party:
 
