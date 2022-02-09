@@ -54,14 +54,14 @@ play Johan Braun. Here is the complete party:[^handouts]
 
 ### The Doctor
 
-{{< figure src="./arthur_dibden.png" >}}
+{{< figure src="/images/masks/arthur_dibden.png" >}}
 
 Arthur Dibden served in the British Royal Army for over twenty years. After the
 war he took up traveling, and wound up in Colombia fighting the Spanish Flu.
 
 ### The Historian
 
-{{< figure src="./eleanor_butler.png" >}}
+{{< figure src="/images/masks/eleanor_butler.png" >}}
 
 Eleanor Butler grew up on a farm in the Midwest before running away to New York
 to study history. She signed on to the expedition to try and finally make her
@@ -69,7 +69,7 @@ mark in academia.
 
 ### The Dilettante
 
-{{< figure src="./jennifer_smallwood.png" >}}
+{{< figure src="/images/masks/jennifer_smallwood.png" >}}
 
 Jennifer Smallwood inherited a small fortune along with her older sister when
 her parents were lost at sea in the late 1800s. While her sister has stayed at
@@ -78,7 +78,7 @@ on to the expedition in search of adventure.
 
 ### The Professor
 
-{{< figure src="./johan_braun.png" >}}
+{{< figure src="/images/masks/johan_braun.png" >}}
 
 Johan Braun was the child of a librarian and a language teacher, and inherited
 their love of books and learning. The Great War broke out while he was teaching
@@ -90,7 +90,7 @@ good use on the expedition.
 
 ### The Adventurer
 
-{{< figure src="./perry_astor.png" >}}
+{{< figure src="/images/masks/perry_astor.png" >}}
 
 Perry Astor was raised on a Canadian ranch, and his love of the outdoors has
 stayed with him throughout his life. At 17 he left home and began traveling
@@ -99,7 +99,7 @@ thinks it's just the thing he's looking for.
 
 ## 3. Rendezvous in Lima
 
-{{< figure src="./clipping.png" >}}
+{{< figure src="/images/masks/clipping.png" >}}
 
 Each of the investigators had independently learned of a rich American explorer
 assembling an expedition to explore an ancient pyramid in southern Peru, and
@@ -108,9 +108,9 @@ Bar Cardenas in Lima, Peru in the evening of March 18th, 1921 to discuss the
 expedition and make plans for the journey.
 
 {{< gallery class="content-gallery" >}}
-{{< img src="./augustus_larkin.png" >}}
-{{< img src="luis_de_mendoza.png" >}}
-{{< img src="jesse_hughes.png" >}}
+{{< img src="/images/masks/augustus_larkin.png" >}}
+{{< img src="/images/masks/luis_de_mendoza.png" >}}
+{{< img src="/images/masks/jesse_hughes.png" >}}
 {{< /gallery >}}
 
 Wearing a fine linen suit and bearing an upbeat, confident manner, Larkin told
@@ -140,7 +140,7 @@ No sooner had Larkin and de Mendoza left than Hughes told us that he wasn't an
 archaeologist and his name wasn't Hughes, but that in fact he was an
 investigative reporter named Jackson Elias.
 
-{{< figure src="./jackson_elias.png" >}}
+{{< figure src="/images/masks/jackson_elias.png" >}}
 
 Thinking back on it, several members of our group had actually read some Elias'
 work, which was predominantly focused on investigating occult death cults. He
@@ -161,15 +161,15 @@ take Larkin at his word at this point. We decided that it would be best to
 perform some of our own research by heading to the archaeological museum in the
 morning. We made plans to meet Elias there and went to bed.
 
-## 5. A Trip to the Museum
+## 5. A Trip to the Museum {#museum}
 
-{{< figure src="./lima.png" >}}
+{{< figure src="/images/masks/lima.png" >}}
 
 Fortunately for us, just down the road a ways from our hotel was the Museo de
 Arqueologia y Antropologia, so following breakfast we reconvened there at the
 office of Prof. Sanchez, a friend and contact of Elias.
 
-{{< figure src="./prof_memesio_sanchez.png" >}}
+{{< figure src="/images/masks/prof_memesio_sanchez.png" >}}
 
 Sanchez told us a curious story: evidently he had, upon reading the story of
 Larkin's planned expedition, reached out to try and lend his expertise to the
@@ -190,7 +190,7 @@ packed with straw. We couldn't help but notice (as we moved Rizo's body while
 investigating) the large piece of worked gold inlaid with geometric patterns
 that was poking out of the box, so naturally we collected it.
 
-{{< figure src="./worked_gold.png" >}}
+{{< figure src="/images/masks/worked_gold.png" >}}
 
 Looking around, Arthur located a trail of bloody footprints and we followed them
 out to the street, where suddenly we heard a loud bang and the screams of
@@ -202,7 +202,7 @@ Not knowing anywhere else to go, we went back inside to discuss events with our
 companions. We showed them the 2ft rod of gold, and then began deciphering
 Rizo's notebook.
 
-{{< figure src="./journal.png" >}}
+{{< figure src="/images/masks/journal.png" >}}
 
 The notebook told the harrowing tale of a conquistador named Gaspar de Figueroa,
 who had come to Peru in the company of Pizarro and also joined by four others:
@@ -238,7 +238,7 @@ Unnerved but undeterred, we returned to the hotel and each went retired to our
 rooms. If things went according to plan we would be well on our way to Puno this
 time tomorrow.
 
-{{< figure src="./peru.png" >}}
+{{< figure src="/images/masks/peru.png" >}}
 
 ## 8. Final Thoughts
 
