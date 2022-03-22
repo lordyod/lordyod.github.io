@@ -1,0 +1,703 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=robots content="noodp">
+<meta http-equiv=x-ua-compatible content="IE=edge, chrome=1">
+<title>Grit and Wounds in 5E (WIP) - Hitpoints and Himbos</title><meta name=description content="Drawing from other games, let's take a look at revamping the health system in D&D 5E. We'll raise the stakes by increasing lethality and creating wound effects which have lasting effects on a character, while at the same time we'll avoid turning the game into a misery simulator by maintaining a sense of cinematic combat."><meta property="og:title" content="Grit and Wounds in 5E (WIP)">
+<meta property="og:description" content="Drawing from other games, let's take a look at revamping the health system in D&D 5E. We'll raise the stakes by increasing lethality and creating wound effects which have lasting effects on a character, while at the same time we'll avoid turning the game into a misery simulator by maintaining a sense of cinematic combat.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.lordyod.com/5e-grit/"><meta property="og:image" content="https://www.lordyod.com/logo.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-03-21T16:00:00-08:00">
+<meta property="article:modified_time" content="2022-03-21T22:24:30-07:00">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://www.lordyod.com/logo.png">
+<meta name=twitter:title content="Grit and Wounds in 5E (WIP)">
+<meta name=twitter:description content="Drawing from other games, let's take a look at revamping the health system in D&D 5E. We'll raise the stakes by increasing lethality and creating wound effects which have lasting effects on a character, while at the same time we'll avoid turning the game into a misery simulator by maintaining a sense of cinematic combat.">
+<meta name=application-name content="Hitpoints and Himbos">
+<meta name=apple-mobile-web-app-title content="Hitpoints and Himbos"><meta name=theme-color content="#ffffff"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=%5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://www.lordyod.com/5e-grit/><link rel=prev href=https://www.lordyod.com/masks_02/><link rel=stylesheet href=/lib/normalize/normalize.min.8235a67a2521ef99fb1e455a5891b022af1653b4ede3cfffcac4e473beee88fbcc1a36bbb3cfdd75fd6df46732032f9d96e30adae9c88b769e1fbf7945cd27e0.css integrity="sha512-gjWmeiUh75n7HkVaWJGwIq8WU7Tt48//ysTkc77uiPvMGja7s8/ddf1t9GcyAy+dluMK2unIi3aeH795Rc0n4A=="><link rel=stylesheet href=/css/style.min.b0f705945c84e6965ea87b23b39755677e52bc8b281f8f928ba85b5c1b6d9f2d59a2c1adf29b8a161dc4509dfed1198e356eab712d4af76e1ae278460298754a.css integrity="sha512-sPcFlFyE5pZeqHsjs5dVZ35SvIsoH4+Si6hbXBttny1ZosGt8puKFh3EUJ3+0RmONW6rcS1K924a4nhGAph1Sg=="><link rel=stylesheet href=/lib/fontawesome-free/all.min.2fb31670aec534f73036a9cb759abcea54c760b750a996b3e58700804fb97271a6970f094f4dd0076fa8c4bd74d14781e9197364b531086492e3ffbe98d65dc7.css integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw=="><link rel=stylesheet href=/lib/animate/animate.min.76826b0bfa1c53c546551c773bdf7cd7ed9a6149f77ee5955afa8b8b553eb40d8c595cecc3e3552aad4fac4345d3733e4d804ff763e7614957147d595b41692f.css integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw=="><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Grit and Wounds in 5E (WIP)","inLanguage":"en-us","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.lordyod.com\/5e-grit\/"},"genre":"posts","keywords":"dnd, homebrew, sinath-lonn","wordcount":3062,"url":"https:\/\/www.lordyod.com\/5e-grit\/","datePublished":"2022-03-21T16:00:00-08:00","dateModified":"2022-03-21T22:24:30-07:00","publisher":{"@type":"Organization","name":"Lord Yod"},"author":{"@type":"Person","name":"Lord Yod"},"description":"Drawing from other games, let's take a look at revamping the health system in D\u0026D 5E. We'll raise the stakes by increasing lethality and creating wound effects which have lasting effects on a character, while at the same time we'll avoid turning the game into a misery simulator by maintaining a sense of cinematic combat."}</script></head>
+<body header-desktop header-mobile=auto><script type=text/javascript>(''==='true'&&window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':'auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark')&&document.body.setAttribute('theme','dark')</script>
+<div id=mask></div><div class=wrapper><header class=desktop id=header-desktop>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title="Hitpoints and Himbos">Hitpoints and Himbos</a>
+</div>
+<div class=menu>
+<div class=menu-inner><a class=menu-item href=/posts> Posts </a><a class=menu-item href=/tags/> Tags </a><a class=menu-item href=/categories/> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop>
+<input type=text placeholder="Search titles or contents..." id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=Search>
+<i class="fas fa-search fa-fw"></i>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=Clear>
+<i class="fas fa-times-circle fa-fw"></i>
+</a>
+<span class="search-button search-loading" id=search-loading-desktop>
+<i class="fas fa-spinner fa-fw fa-spin"></i>
+</span>
+</span><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw"></i>
+</a>
+</div>
+</div>
+</div>
+</header><header class=mobile id=header-mobile>
+<div class=header-container>
+<div class=header-wrapper>
+<div class=header-title>
+<a href=/ title="Hitpoints and Himbos">Hitpoints and Himbos</a>
+</div>
+<div class=menu-toggle id=menu-toggle-mobile>
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class=menu id=menu-mobile><div class=search-wrapper>
+<div class="search mobile" id=search-mobile>
+<input type=text placeholder="Search titles or contents..." id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=Search>
+<i class="fas fa-search fa-fw"></i>
+</a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=Clear>
+<i class="fas fa-times-circle fa-fw"></i>
+</a>
+<span class="search-button search-loading" id=search-loading-mobile>
+<i class="fas fa-spinner fa-fw fa-spin"></i>
+</span>
+</div>
+<a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>
+Cancel
+</a>
+</div><a class=menu-item href=/posts title>Posts</a><a class=menu-item href=/tags/ title>Tags</a><a class=menu-item href=/categories/ title>Categories</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw"></i>
+</a></div>
+</div>
+</header>
+<div class="search-dropdown desktop">
+<div id=search-dropdown-desktop></div>
+</div>
+<div class="search-dropdown mobile">
+<div id=search-dropdown-mobile></div>
+</div>
+<main class=main>
+<div class=container><div class=toc id=toc-auto>
+<h2 class=toc-title>Contents</h2>
+<div class=toc-content id=toc-content-auto></div>
+</div><article class="page single"><h1 class="single-title animated flipInX">Grit and Wounds in 5E (WIP)</h1><h2 class=single-subtitle>Designing a better health system</h2><div class=post-meta>
+<div class=post-meta-line><span class=post-author><a href=https://www.lordyod.com title=Author target=_blank rel="noopener noreferrer author" class=author><i class="fas fa-user-circle fa-fw"></i>Lord Yod</a></span>&nbsp;<span class=post-category>included in <a href=/categories/rpg/><i class="far fa-folder fa-fw"></i>rpg</a></span></div>
+<div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="Mar 21, 2022">Mar 21, 2022</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;3062 words&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;15 minutes&nbsp;</div>
+</div><div class=featured-image><img class=lazyload src=/svg/loading.min.svg data-src=/images/dnd_logo.png data-srcset="/images/dnd_logo.png, /images/dnd_logo.png 1.5x, /images/dnd_logo.png 2x" data-sizes=auto alt=/images/dnd_logo.png title="Drawing from other games, let's take a look at revamping the health system in D&D 5E. We'll raise the stakes by increasing lethality and creating wound effects which have lasting effects on a character, while at the same time we'll avoid turning the game into a misery simulator by maintaining a sense of cinematic combat."></div><div class="details toc" id=toc-static kept>
+<div class="details-summary toc-title">
+<span>Contents</span>
+<span><i class="details-icon fas fa-angle-right"></i></span>
+</div>
+<div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents>
+<ul>
+<li><a href=#1-the-problem>1: The Problem</a></li>
+<li><a href=#2-grit>2: Grit</a>
+<ul>
+<li><a href=#21-maximum-grit>2.1: Maximum Grit</a></li>
+</ul>
+</li>
+<li><a href=#3-losing-grit>3: Losing Grit</a>
+<ul>
+<li><a href=#31-critical-hits>3.1: Critical Hits</a></li>
+<li><a href=#32-wounds>3.2: Wounds</a></li>
+<li><a href=#33-armor>3.3: Armor</a></li>
+</ul>
+</li>
+<li><a href=#4-regaining-grit>4: Regaining Grit</a>
+<ul>
+<li><a href=#41-rest-and-recovery>4.1: Rest and Recovery</a></li>
+<li><a href=#42-healing-wounds>4.2: Healing Wounds</a></li>
+</ul>
+</li>
+<li><a href=#5-magic>5: Magic</a>
+<ul>
+<li><a href=#51-spell-conversions>5.1: Spell Conversions</a></li>
+<li><a href=#52-new-spells>5.2: New Spells</a></li>
+<li><a href=#53-abilities>5.3: Abilities</a></li>
+</ul>
+</li>
+<li><a href=#6-injury-effects>6: Injury Effects</a></li>
+</ul>
+</nav></div>
+</div><div class=content id=content><h2 id=1-the-problem>1: The Problem</h2>
+<p>The 5E rules describe hit points as &lsquo;a combination of physical and mental
+durability, the will to live, and luck.&rsquo; The problem with this is that the rules
+don&rsquo;t really back this up. When you get hit with an attack, you lose hit points,
+but does this represent you actually getting hit? Or does it represent you
+dodging out of the way, or getting lucky somehow? And if it does mean you dodged
+or get lucky, how does <em>cure wounds</em> heal you?</p>
+<p>I don&rsquo;t think I need to go into the shitshow that is the death save system. It
+doesn&rsquo;t make any sense, and furthermore it incentivizes playing like you&rsquo;re a
+piece in a board game, instead of as if you were a person. This is apparent when
+you consider a cleric with <em>healing word</em> ready and an ally at 1 hp. In
+&lsquo;reality&rsquo; you&rsquo;d use this sort of healing ability as soon as you could in that
+situation, because your friend might die at any moment. In 5E it&rsquo;s optimal to
+wait for the ally to get hit and go unconscious, because any amount of healing
+will bring them back to consciousness no matter how hard they got hit.</p>
+<p>Lastly, consider rest and recovery. In older versions of the game you would heal
+very slowly, in the low single digits per day with bed rest. Under this type of
+system you could get hit and require days (or even weeks) of rest to recover.
+Contrast this with 5E, where you can be taken to the brink of death and recover
+fully with a night&rsquo;s rest.</p>
+<p>So let&rsquo;s talk about fixing it, shall we?<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup></p>
+<h2 id=2-grit>2: Grit</h2>
+<p>The first thing to do is to make it explicit - hit points don&rsquo;t represent your
+health, they represent your ability to avoid bodily damage. To make this a bit
+clearer and avoid confusion, we&rsquo;re going to change the name to <em>Grit</em>. Grit can
+manifest in several different forms:</p>
+<ul>
+<li>The nimble duelist who swiftly ducks out of the way of a blow.</li>
+<li>The brawler with a chin like a block of concrete, who takes punches without flinching.</li>
+<li>The mystic with the strength of will to continue on despite the pain.</li>
+</ul>
+<p>The desired gameplay effects are that, most of the time, the mechanics are
+essentially unchanged from regular 5E. When you get hit in combat you still lose
+the same amount. This lets us continue to represent the (usually quite
+far-fetched) mechanics in the fiction with a higher degree of verisimilitude.</p>
+<h3 id=21-maximum-grit>2.1: Maximum Grit</h3>
+<p>A character&rsquo;s maximum grit is calculated in basically the same way as HP is
+normally:</p>
+<blockquote>
+<p><strong>Maximum Grit = hit dice roll + (Grit Modifier x level)</strong></p>
+</blockquote>
+<p>Your <strong>Grit Modifier</strong> is the combination of class abilities, magic items,
+ability scores, and other effects. All characters start with a grit modifier
+equal to the Dexterity bonus (minimum 0).</p>
+<blockquote>
+<p><em>Example: Sarah casts a spell which allows her to add her Intelligence
+modifier to her grit modifier in addition to any others she could
+already use. With an 18 Intelligence, this increases her Grit Modifier by +4,
+and immediately raises her current and maximum grit by 4 x HD.</em></p>
+</blockquote>
+<p>Any time you gain a level, you roll your maximum grit again. You gain either 1hp
+or your the results of your new roll, whichever is higher.<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup></p>
+<blockquote>
+<p><em>Example: Sarah is a Wizard 2/Fighter 3 with 16 Constitution. Her maximum HP
+was rolled 2d6 + 3d10 + 15 = 41. When she gains another level of Wizard, she
+will roll 3d6 + 3d10 + 18, with a minimum new value of 42.</em></p>
+</blockquote>
+<h2 id=3-losing-grit>3: Losing Grit</h2>
+<p>When a character takes damage (in combat or otherwise) it is subtracted from
+their Grit. If all damage is absorbed by your Grit, this means that the
+character wasn&rsquo;t wounded. From a narrative perspective, perhaps they dodged
+aside at the last second, or they took a punch on the chin without flinching.
+Mechanically speaking, as long as you still have Grit remaining, there aren&rsquo;t
+any ill effects from taking damage as long as you still have some Grit
+remaining.</p>
+<blockquote>
+<p><em>Example: Sarah has 18 Grit when she is attacked by a bear, which swipes at
+her with its claws. It hits her AC, and rolls 7 damage. Sarah&rsquo;s player
+subtracts 7 from her current Grit. Since she still has 11 Grit remaining there
+are no other effects.</em></p>
+</blockquote>
+<h3 id=31-critical-hits>3.1: Critical Hits</h3>
+<p>Critical hits bypass Grit. No matter how skilled you are, there is always a
+chance of a lucky blow connecting. However, they do not deal increased damage.
+(Abilities that deal additional damage on a critical hit, such as <em>flaming
+burst</em>, function as written)</p>
+<blockquote>
+<p><em>Example: The bear swipes at Sarah with its other claw, and the attack roll is
+a 20 with a damage roll of 5. Since this is a critical hit, this 5 damage
+bypasses Sarah&rsquo;s Grit.</em></p>
+</blockquote>
+<h3 id=32-wounds>3.2: Wounds</h3>
+<p>Any time you take damage which is not absorbed by your Grit, you suffer one or
+more Wounds. This represents that your PC has hit hard enough, or in a
+vulnerable enough spot, that they will begin suffering ill effects. A character
+can suffer as many wounds as they have Constitution - if their current wounds is
+higher than their current Constitution, they die.</p>
+<p>Some wounds cause lasting effects to a character, taking the form of ability
+score penalties, conditions, or ongoing damage. To determine the effects of a
+wound, you must make a <strong>Critical Wound Save</strong>. This is a Constitution saving
+throw with a DC equal to the number of wounds the character has suffered so far
+plus the amount of damage being suffered.</p>
+<blockquote>
+<p><strong>Critical Wound Save DC:</strong> Current Wounds + Incoming Damage</p>
+</blockquote>
+<p><em>Current Wounds</em> means the number of wounds the character has already suffered,
+before determining the effects of this new injury. <em>Incoming Damage</em> means the
+amount of damage remaining after absorption from grit, magical effects, etc.</p>
+<blockquote>
+<p><em>Example: Sarah has 5 grit remaining, and is shot with an arrow for 7 damage.
+Since this causes her to drop to 0 grit, she will need to make a critical
+wound save. Since this is her second wound, she calculates her save DC as 1
+current wound + 2 incoming damage = DC 3.</em></p>
+</blockquote>
+<p>Failing this saving throw means receiving a killing blow of some kind. Beating
+the saving throw means receiving a wound which does not outright kill you, but
+may have other effects. The severity of these effects are based on the margin of
+success on the throw, as indicated below:</p>
+<table>
+<thead>
+<tr>
+<th>Beat DC by:</th>
+<th>Severity:</th>
+<th>Description:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20+</td>
+<td><em><strong>Dramatic Injury</strong></em></td>
+<td>Not only does this injury not impact your abilities, it&rsquo;ll even make you look cool and leave an impressive scar.</td>
+</tr>
+<tr>
+<td>14-19</td>
+<td><em><strong>Flesh Wound</strong></em></td>
+<td>This type of injury certainly hurts, and takes a while to heal, but ultimately it&rsquo;s unlikely to be the end of you. Most PC&rsquo;s will be able to handle taking a flesh wound or two without any difficulty - so long as the fight ends soon after.</td>
+</tr>
+<tr>
+<td>6-13</td>
+<td><em><strong>Minor Injury</strong></em></td>
+<td>This type of wound will have moderately debilitating effects, but they won&rsquo;t be permanent. A pulled muscle, bad contusion, or mild concussion.</td>
+</tr>
+<tr>
+<td>0-5</td>
+<td><em><strong>Critical Injury</strong></em></td>
+<td>This type of wound not only hurts but has a very real impact on your ability to continue on and may even be permanent. Broken limbs, amputations, and gut wounds are all examples of this sort of thing. Few adventurers will be able to withstand more than one.</td>
+</tr>
+<tr>
+<td>failure</td>
+<td><em><strong>Death Blow</strong></em></td>
+<td>If this type of injury doesn&rsquo;t kill you immediately, it&rsquo;s only because it wants you to suffer for a while before you die.</td>
+</tr>
+</tbody>
+</table>
+<p>Regardless of other effects, on a Critical Wound Save a natural 20 always
+results in a Dramatic Injury, and a natural 1 always results in a Death
+Blow.<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup></p>
+<h3 id=33-armor>3.3: Armor</h3>
+<p>The major advantage of heavier armor is its increased protection against
+critical wounds. If your character is wearing armor they are proficient in, they
+add the corresponding bonus to their saving throw modifier when rolling a wound save.</p>
+<table>
+<thead>
+<tr>
+<th>Armor</th>
+<th>Save Bonus</th>
+<th>Maximum Dexterity Bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Padded</td>
+<td>+1</td>
+<td>Any</td>
+</tr>
+<tr>
+<td>Leather</td>
+<td>+1</td>
+<td>Any</td>
+</tr>
+<tr>
+<td>Studded Leather</td>
+<td>+2</td>
+<td>Any</td>
+</tr>
+<tr>
+<td>Hide</td>
+<td>+2</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>Chain Shirt</td>
+<td>+3</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>Scale Mail</td>
+<td>+4</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>Breastplate</td>
+<td>+4</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>Half Plate</td>
+<td>+5</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>Ring Mail</td>
+<td>+4</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chain Mail</td>
+<td>+6</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Splint Mail</td>
+<td>+7</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Plate</td>
+<td>+8</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>If a character would add their Dexterity modifier to their Grit, they may not
+add more than the amount listed for the corresponding armor.</p>
+<h2 id=4-regaining-grit>4: Regaining Grit</h2>
+<p>Grit recovers relatively quickly, while wounds take much longer to heal.</p>
+<h3 id=41-rest-and-recovery>4.1: Rest and Recovery</h3>
+<p>A character recovers Grit just like in regular 5e, rolling hit dice during short
+rests using their Grit modifier and recovering all such hit dice after a long
+rest. However, if the character is wounded, their recovery is limited. Any
+unhealed wounds are subtracted from the grit modifier when rolling hit dice to
+recover, and limit the maximum grit after a long rest.</p>
+<h3 id=42-healing-wounds>4.2: Healing Wounds</h3>
+<p>At the end of a Long Rest, you may make a Constitution saving throw, and if you
+succeed you heal one wound. The DC of the check has a base of 10 + the number of
+wounds you have suffered, with modifiers based on the circumstances of your
+healing:</p>
+<table>
+<thead>
+<tr>
+<th>Status:</th>
+<th>Required Conditions:</th>
+<th>DC Modifier:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nursed</td>
+<td>Attendant needs to expend a use of a healer&rsquo;s kit and make a Wisdom (Medicine) check, DC 5 + number of wounds, at disadvantage if on self</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>Received surgery</td>
+<td>Surgeon requires expert tools and must make Wisdom (Medicine) check, DC 15 + number of wounds, at disadvantage if on self</td>
+<td>-10</td>
+</tr>
+<tr>
+<td>Complete bed rest</td>
+<td>This means you may as well be sleeping for 24 hours straight</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>Difficult conditions</td>
+<td>aboard ship, in a tent during a storm, rough travel in a wagon, etc</td>
+<td>+5</td>
+</tr>
+<tr>
+<td>Significant physical activity</td>
+<td>most things undertaken by typical adventurers, such as exploring a dungeon, movement requiring a Strength- of Dexterity-based skill check, carrying more than a Light load of equipment, etc</td>
+<td>+5</td>
+</tr>
+</tbody>
+</table>
+<p>Some injuries have lasting effects. To recover from these effects you must heal
+wounds equal to the original damage suffered. If there are multiple such wounds
+determine which one is healed randomly. Some of these wounds cannot be healed
+without medical attention, surgery, or magical healing.</p>
+<p>Regardless of other effects to the DC, a natural roll of 20 always succeeds and
+a natural roll of 1 always fails.</p>
+<h2 id=5-magic>5: Magic</h2>
+<p>The basic idea is that anything from vanilla 5E which restores HP instead
+restores an equivalent amount of grit. This is the rule you should follow for
+any sort of healing effect unless the item is mentioned later in this section.</p>
+<h3 id=51-spell-conversions>5.1: Spell Conversions</h3>
+<p>Here&rsquo;s an incomplete list of spells converted from vanilla 5E:</p>
+<table>
+<thead>
+<tr>
+<th>Spell:</th>
+<th>Notes:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>(Mass) Cure Wounds</em></td>
+<td>This spell doesn&rsquo;t exist in this form and is replaced with <em>Invigorate</em> (see below).</td>
+</tr>
+<tr>
+<td><em>Enervation</em></td>
+<td>On a failed save, the target takes 1d8 damage, bypassing grit.</td>
+</tr>
+<tr>
+<td><em>Goodberry</em></td>
+<td>Setting aside the nourishment question<sup id=fnref:4><a href=#fn:4 class=footnote-ref role=doc-noteref>4</a></sup>, someone who eats a <em>goodberry</em> acts as if they are being nursed with a healer&rsquo;s kit.</td>
+</tr>
+<tr>
+<td><em>(Mass) Heal</em></td>
+<td>Instead of regaining 70 hit points, the target recovers 7 wounds (+ 1 wound/level for spell level above 6th). The mass version restores 70 wounds.</td>
+</tr>
+<tr>
+<td><em>Greater/lesser restoration</em></td>
+<td>These spells work as written, and are used to heal critical injuries with lasting effects.</td>
+</tr>
+<tr>
+<td><em>Life Transference</em></td>
+<td>You suffer 1d4 wounds, and the target recovers twice that amount. If this removes the wounds associated with a critical injury then the effect of that injury is also removed.</td>
+</tr>
+<tr>
+<td><em>Power Word Heal</em></td>
+<td>The target regains any lost wounds, ending any critical injury effects, as well as any lost grit.</td>
+</tr>
+<tr>
+<td><em>Raise Dead</em></td>
+<td>The creature returns with 0 grit. The spell heals all wounds which do not cause missing body parts, meaning any critical injury effects unrelated to severed limbs/appendages/etc are healed and the associated wounds are recovered.</td>
+</tr>
+<tr>
+<td><em>Regenerate</em></td>
+<td>The target regains 2d4+3 wounds immediately, + 1 wound per minute.</td>
+</tr>
+<tr>
+<td><em>Resurrection</em></td>
+<td>This spell heals all wounds and grit.</td>
+</tr>
+<tr>
+<td><em>Revivify</em></td>
+<td>This spell causes the target to heal the wound which killed them. If this was a critical injury, any associated effects are also healed.</td>
+</tr>
+<tr>
+<td><em>Spare the Dying</em></td>
+<td>Being at 0 grit is not the same thing in this new system so this spell is removed.<sup id=fnref:5><a href=#fn:5 class=footnote-ref role=doc-noteref>5</a></sup></td>
+</tr>
+<tr>
+<td><em>Vampiric Touch</em></td>
+<td>On a hit, the target suffers 1d6 necrotic damage, bypassing grit, and you recover wounds equal to half the amount suffered (minimum 1).</td>
+</tr>
+</tbody>
+</table>
+<h3 id=52-new-spells>5.2: New Spells</h3>
+<p>Some new spells to work around the new system:</p>
+<ul>
+<li>
+<p><strong>Cure Wounds</strong></p>
+<ul>
+<li><em>Level:</em> 1st</li>
+<li><em>Casting Time:</em> 1 action</li>
+<li><em>Range/Area:</em> touch</li>
+<li><em>Components:</em> verbal, somatic</li>
+<li><em>Duration:</em> instantaneous</li>
+<li><em>School:</em> evocation</li>
+<li><em>Attack/Save:</em> none</li>
+<li><em>Damage/Effect:</em> healing</li>
+<li><em>Description:</em> A creature you touch regains 1 wound. (When you cast this
+spell using a spell slot of 2nd level or higher, the healing increases by
+1 wound per slot level above 1st.) This spell does not heal critical
+injury effects.</li>
+</ul>
+</li>
+<li>
+<p><strong>Lesser Restoration</strong></p>
+<ul>
+<li><em>Level:</em> 2nd</li>
+<li><em>Casting Time:</em> 1 action</li>
+<li><em>Range/Area:</em> touch</li>
+<li><em>Components:</em> V, S</li>
+<li><em>Duration:</em> instantaneous</li>
+<li><em>School:</em> abjuration</li>
+<li><em>Attack/Save:</em> none</li>
+<li><em>Damage/Effect:</em> healing</li>
+<li><em>Description:</em> You touch a creature and choose one of the following:
+<ul>
+<li>Cure a disease.</li>
+<li>Cure the conditions (but not wounds) associated with one Minor Injury or
+Flesh Wound.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Greater Restoration</strong></p>
+<ul>
+<li><em>Level:</em> 5th</li>
+<li><em>Casting Time:</em> 1 action</li>
+<li><em>Range/Area:</em> touch</li>
+<li><em>Components:</em> V, S, M (diamond dust worth at least 100 gp, which the spell
+consumes)</li>
+<li><em>Duration:</em> instantaneous</li>
+<li><em>School:</em> abjuration</li>
+<li><em>Attack/Save:</em> none</li>
+<li><em>Damage/Effect:</em> healing</li>
+<li><em>Description:</em> You touch a creature and choose one of the following:
+<ul>
+<li>Reduce the target&rsquo;s exhaustion by one</li>
+<li>End one charm or petrify effect</li>
+<li>Remove a curse</li>
+<li>Cure one critical injury (other than a death blow)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id=53-abilities>5.3: Abilities</h3>
+<p>Some important class and other special abilities also need conversion.</p>
+<ul>
+<li><em>Unarmored Defense:</em> A Barbarian adds their Constitution modifier to the Grit
+modifier. A Monk adds their Wisdom modifier.</li>
+<li><em>Relentless Rage</em>:* If you suffer wounds equal to your Constitution without
+suffering a death blow, you can make a DC 10 Constitution saving throw. If
+you succeed, you have 1 wound remaining instead.</li>
+<li><em>Rage beyond Death:</em> You don&rsquo;t die from losing wounds or the effects of
+critical injuries so long as your rage continues.</li>
+</ul>
+<h2 id=6-injury-effects>6: Injury Effects</h2>
+<p>Wounds inflict a variety of different effects, sometimes more than one. New
+conditions are listed here:</p>
+<ul>
+<li>
+<p><strong>Dying:</strong> Sometimes death is basically inevitable, but not immediate.
+While in this state, you get one more turn before you die. (You must take your
+action as soon as it&rsquo;s available.) Nothing can be done to stop this. A dying
+character’s death sentence is merely slightly delayed, but still irrevocable.</p>
+</li>
+<li>
+<p><strong>Bleeding Out:</strong> A character who is bleeding out gains 1d4 wounds at the
+start of every round. As an action, a character can attempt a Wisdom
+(Medicine) roll to staunch the bleeding, with DC 5 + the number of wounds the
+character has suffered. It is particularly difficult to do this to yourself,
+raising the DC by 5. If the check is successful, the bleeding is slowed to a
+rate of turns instead of rounds.</p>
+<p>A character can also attempt to properly treat the bleeding of a character
+bleeding at a rate of turns. Doing so is more involved, so takes a full turn.
+If successful, the patient stops bleeding entirely.</p>
+</li>
+<li>
+<p><strong>Broken Leg:</strong> You are <strong>Restrained</strong> and knocked <strong>Prone</strong>.</p>
+<ul>
+<li>
+<p>A broken leg can be temporarily treated with a splint. As an action, make a
+Wisdom (Medicine) check with DC 5 + the number of wounds the character has
+suffered. It is difficult to do this to your own leg, raising the DC by 5.</p>
+</li>
+<li>
+<p>As an action, you can crawl despite being <strong>Restrained</strong>. Make a
+Constitution saving throw, DC 10 + the number of wounds you have suffered.
+If successful, you may move up to 5ft. If your leg is splinted (see above),
+or if you have something to use as a crutch, this can be done without a
+saving throw.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Broken Arm:</strong> Anything you were carrying in that hand is dropped. One-handed
+actions with that limb are essentially impossible. Two-handed actions may be
+possible at disadvantage. A broken arm can be splinted just like a leg,
+allowing some use of the limb.</p>
+</li>
+<li>
+<p><strong>Amputated Limb:</strong> As above, but cannot be splinted, and will be permanent
+except for high-level healing spells.</p>
+</li>
+<li>
+<p><strong>Head Trauma:</strong> Depending on severity, the following effects are possible:</p>
+<ul>
+<li>Fall <strong>Unconscious</strong> for a number of rounds</li>
+<li>Short-term <strong>Stunned</strong></li>
+<li>Short-term <strong>Blindness</strong></li>
+<li>Short-term <strong>Deafened</strong></li>
+<li>Short- or long-term <strong>Exhaustion</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Eye Wound:</strong> Disadvantage on Wisdom (Perception) checks based on sight, with
+duration depending on severity. If it happens to both eyes, this is
+<strong>Blindness</strong> instead.</p>
+</li>
+<li>
+<p><strong>Ear Wound:</strong> As eye wound, but based on sound, and <strong>Deafened</strong>.</p>
+</li>
+<li>
+<p><strong>Hand Wound:</strong> Depending on severity, this can range from a smashed hand to
+severed fingers. This impedes some Dexterity-based ability checks as well as
+somatic spellcasting.</p>
+</li>
+<li>
+<p><strong>Gut Wound:</strong> Gain the <strong>Poisoned</strong> condition until treated (as if Bleeding
+Out, see above).</p>
+</li>
+</ul>
+<section class=footnotes role=doc-endnotes>
+<hr>
+<ol>
+<li id=fn:1 role=doc-endnote>
+<p>The system I describe here is adapted from other games. The
+first time I saw such a system used was in Star Wars D20, which called the two
+stats <em>Wound Points</em> and <em>Vitality Points</em>. I think the idea of using your
+vitality to power your abilities is pretty interesting but the way it was
+implemented in this game had some problems. That game didn&rsquo;t have critical
+injuries, of course - for that I draw inspiration from Warhammer Fantasy
+Roleplay and the excellent B/X-based games written by <a href="https://www.drivethrurpg.com/browse.php?author=Emmy%20Allen" target=_blank rel="noopener noreferrer">Emmy Allen aka
+cavegirl</a> such as
+Esoteric Enterprises and Wolf-Packs and Winter Snow. And of course separating
+HP from your health is one of the core features of Into the Odd by <a href=https://www.bastionland.com/ target=_blank rel="noopener noreferrer">Chris
+McDowall</a>.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:2 role=doc-endnote>
+<p>This comes from the excellent Stars Without Number, Worlds
+Without Number, and so on, by Kevin Crawford over at <a href=http://www.sinenomine-pub.com/ target=_blank rel="noopener noreferrer">Sine Nomine
+Publishing</a>.&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:3 role=doc-endnote>
+<p>The intent of the distribution of wound effects, and the
+natural 20/natural 1 rules, is to create an environment where being wounded is
+<em>always</em> something to be avoided if possible, because there is a decent chance
+that it will have lasting effects on your character. While the chance of death
+might be quite small, it never drops below 5%. Even if your PC won&rsquo;t die
+outright, the chance of critical injury is still fairly significant (depending
+on equipment and effects).&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:4 role=doc-endnote>
+<p>At my table it converts one &lsquo;supply&rsquo; of suitable herbs into one
+&lsquo;supply&rsquo; of rations, which feeds one person for a day.&#160;<a href=#fnref:4 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+<li id=fn:5 role=doc-endnote>
+<p>Optionally, this could work to halt the effects of a death
+blow, however I think this will trivialize these injury types so it won&rsquo;t be a
+thing at my table.&#160;<a href=#fnref:5 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p>
+</li>
+</ol>
+</section></div><div class=post-footer id=post-footer>
+<div class=post-info>
+<div class=post-info-line>
+<div class=post-info-mod>
+<span>Updated on Mar 21, 2022</span>
+</div>
+<div class=post-info-license></div>
+</div>
+<div class=post-info-line>
+<div class=post-info-md></div>
+<div class=post-info-share>
+<span><a href=javascript:void(0); title="Share on Twitter" data-sharer=twitter data-url=https://www.lordyod.com/5e-grit/ data-title="Grit and Wounds in 5E (WIP)" data-via=lordyod data-hashtags=dnd,homebrew,sinath-lonn><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="Share on Reddit" data-sharer=reddit data-url=https://www.lordyod.com/5e-grit/><i class="fab fa-reddit fa-fw"></i></a></span>
+</div>
+</div>
+</div>
+<div class=post-info-more>
+<section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/dnd/>dnd</a>,&nbsp;<a href=/tags/homebrew/>homebrew</a>,&nbsp;<a href=/tags/sinath-lonn/>sinath-lonn</a></section>
+<section>
+<span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span>
+</section>
+</div>
+<div class=post-nav><a href=/masks_02/ class=prev rel=prev title="Masks of Nyarlathotep - Session 2"><i class="fas fa-angle-left fa-fw"></i>Masks of Nyarlathotep - Session 2</a></div>
+</div>
+<div id=comments>
+<div class=post-footer>
+<section id=isso-thread></section>
+<script data-isso=https://isso.lordyod.com/ data-isso-id=thread-id data-isso-css=true data-isso-lang=en data-isso-reply-to-self=true data-isso-reply-notifications=true data-isso-require-author=true data-isso-require-email=true data-isso-max-comments-top=10 data-isso-max-comments-nested=5 data-isso-reveal-on-click=5 data-isso-avatar=false data-isso-gravatar=true data-isso-feed=true data-isso-vote=false src=https://isso.lordyod.com/js/embed.min.js></script>
+</div>
+</div></article></div>
+</main><footer class=footer>
+<div class=footer-container><div class=footer-line>Powered by <a href=https://gohugo.io/ target=_blank rel="noopener noreferrer" title="Hugo 0.88.0">Hugo</a> | Theme - <a href=https://github.com/sunt-programator/CodeIT target=_blank rel="noopener noreferrer" title="CodeIT 0.2.10"><i class="fas fa-laptop-code fa-fw"></i> CodeIT</a>
+</div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2021 - 2022</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=https://www.lordyod.com target=_blank rel="noopener noreferrer">Lord Yod</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div>
+</div>
+</footer></div>
+<div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top">
+<i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title="View Comments">
+<i class="fas fa-comment fa-fw"></i>
+</a>
+</div><script type=text/javascript src=/lib/smooth-scroll/smooth-scroll.min.e9c0c2a48f70798908fc0c6e65ba47b80e8cd3961f0580a2fee3a84434d3af807a674e9447b49523af87a6a80642a32887c031eb5e1ded2af091bcd8e4bcd935.js integrity="sha512-6cDCpI9weYkI/AxuZbpHuA6M05YfBYCi/uOoRDTTr4B6Z06UR7SVI6+HpqgGQqMoh8Ax614d7SrwkbzY5LzZNQ=="></script><script type=text/javascript src=/lib/autocomplete/autocomplete.min.95377e01eea2e97083a9e6b4ae56c55a423a5b0cb7e6a298f06c004bbc318ff9a88e6687caa4c1c869aa278c33aae29bdb234b2cd85ae80acf7ad76b7ad61862.js integrity="sha512-lTd+Ae6i6XCDqea0rlbFWkI6Wwy35qKY8GwAS7wxj/mojmaHyqTByGmqJ4wzquKb2yNLLNha6ArPetdretYYYg=="></script><script type=text/javascript src=/lib/lunr/lunr.min.1e225d911c92cd786251c5f65707976a2cbcc9e636d767a9fe3e75cd1ff3e483c25f86543b169fea7689ff47502ffda5f992fe07d8a7feee274fc40967fde68a.js integrity="sha512-HiJdkRySzXhiUcX2VweXaiy8yeY212ep/j51zR/z5IPCX4ZUOxaf6naJ/0dQL/2l+ZL+B9in/u4nT8QJZ/3mig=="></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.4e60f014b860dd4038646d046f8308c93d4ed4c6fe3b0c399051b4b87a97b1d6f2673f4372f61084aa4680d91a98023a876946199ab65fc7ed389bc5fd78d352.js integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg=="></script><script type=text/javascript src=/lib/clipboard/clipboard.min.843586ca1f88cb832bf401cecd43f6f98d2254f9ff070c716a84a57848c7fe2d68e0455317fb21d3f0354b28a2f0f58e69efae3ebf93fca1f0ca7a1e6d2b8087.js integrity="sha512-hDWGyh+Iy4Mr9AHOzUP2+Y0iVPn/BwxxaoSleEjH/i1o4EVTF/sh0/A1Syii8PWOae+uPr+T/KHwynoebSuAhw=="></script><script type=text/javascript src=/lib/sharer/sharer.min.c4c86aeb36b41ca1e3aad5e04e9297a121178682f01c799a25844b78c742d98fe914b37de07ce1f1ce0812385a2272654d39db5d80c9df7658de91e4a1987f26.js integrity="sha512-xMhq6za0HKHjqtXgTpKXoSEXhoLwHHmaJYRLeMdC2Y/pFLN94Hzh8c4IEjhaInJlTTnbXYDJ33ZY3pHkoZh/Jg=="></script><script type=text/javascript>window.config={code:{copyTitle:"Copy to clipboard",maxShownLines:10},comment:{},search:{highlightTag:"em",lunrIndexURL:"/index.json",maxResultLength:10,noResultsFound:"No results found",snippetLength:30,type:"lunr"}}</script><script type=text/javascript src=/js/theme.min.a407fbc9b1cc01fc8fb3be770b945e600e43fc535f748bd5aed43e2087db030d8a609277c4239a1b7c2ad5cefe7e98b0ab99feee49c46aba24110aa2cf77af69.js integrity="sha512-pAf7ybHMAfyPs753C5ReYA5D/FNfdIvVrtQ+IIfbAw2KYJJ3xCOaG3wq1c7+fpiwq5n+7knEarokEQqiz3evaQ=="></script></body>
+</html>
